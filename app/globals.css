@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: 'arthemys';
+    src: url('./fonts/arthemys.otf') format('opentype');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'outfit';
+    src: url('./fonts/outfit.ttf') format('truetype');
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'geomanist';
+    src: url('./fonts/geomanist.ttf') format('truetype');
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'geomanist-thin';
+    src: url('./fonts/geomanist-thin.ttf') format('truetype');
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'NeueMontreal-Light';
+    src: url('./fonts/NeueMontreal-Light.otf') format('opentype');
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'NeueMontreal-Regular';
+    src: url('./fonts/NeueMontreal-Regular.otf') format('opentype');
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+
+
+  @font-face {
+    font-family: "ABChanel Corpo Regular";
+    src: url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot");
+    src: url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.svg#ABChanel Corpo Regular")format("svg");
+}
+
+  h1 {
+    font-family: "ABChanel Corpo Regular";
+   font-size: 25px;
+   font-weight: 600;
+   -webkit-font-smoothing: antialiased;
+   vertical-align: baseline;
+  }
+
+  h2 {
+    font-family: 'geomanist-thin';
+  }
+
+  h4 {
+    font-family: 'geomanist', sans-serif;
+  }
+
+  span {
+    font-family: 'geomanist', sans-serif;
+  }
+
+  p {
+    font-family: 'NeueMontreal-Regular';
+  }
+
+  .p-button {
+    font-family: 'NeueMontreal-Regular';
+    font-weight: 400;
+  }
