@@ -6,7 +6,7 @@ export interface Product {
   image: string; // Ścieżka do obrazu
 }
 
-export const products = [
+export const products: Product[] = [
     {
       id: "p1",
       name: "24K Supreme Body Volumizing Mousse 5.5 oz",

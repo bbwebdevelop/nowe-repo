@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-import { products } from "@/data/products";
+import { products } from "@/app/data/products";
+
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2024-10-28.acacia",
@@ -35,7 +36,7 @@ export async function POST(req: Request) {
         },
       ],
       mode: "payment",
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop/success`, // Poprawna ścieżka sukcesu
+      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/booking/success`, // Poprawna ścieżka sukcesu
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop`, // Poprawna ścieżka anulowania
     });
 

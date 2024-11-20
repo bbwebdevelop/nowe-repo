@@ -1,8 +1,7 @@
-import { NextConfig } from "next";
-import { Configuration } from "webpack";
 import path from "path";
+import type { Configuration } from "webpack";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   webpack: (config: Configuration) => {
     config.resolve = {
       ...config.resolve,
@@ -14,7 +13,7 @@ const nextConfig: NextConfig = {
     return config;
   },
   env: {
-    FORCE_BUILD: Date.now().toString(), // Dodanie zmiennej środowiskowej do wymuszenia nowego buildu
+    FORCE_BUILD: Date.now().toString(), 
   },
 };
 

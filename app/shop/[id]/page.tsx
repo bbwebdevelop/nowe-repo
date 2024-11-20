@@ -1,42 +1,68 @@
-"use client";
+'use client';
 
-import { products, Product } from "@/data/products";
-import { notFound } from "next/navigation";
+import { useEffect, useState } from "react";
+import { products, Product } from "@/app/data/products";
 import Image from "next/image";
-import { use } from "react";
+import { notFound } from "next/navigation";
 
-export default function ProductPage({ params: promise }: { params: Promise<{ id: string }> }) {
-  const params = use(promise); // Odpakowanie params (Promise)
+interface Props {
+  params: Promise<{ id: string }>;
+}
 
-  const product = products.find((item: Product) => item.id === params.id);
+export default function ProductPage({ params }: Props) {
+  const [productId, setProductId] = useState<string | null>(null);
+  const [product, setProduct] = useState<Product | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      const resolvedParams = await params;
+      setProductId(resolvedParams.id);
+    })();
+  }, [params]);
+
+  useEffect(() => {
+    if (productId) {
+      const foundProduct = products.find((p) => p.id === productId) || null;
+      setProduct(foundProduct);
+
+      if (!foundProduct) {
+        notFound();
+      }
+    }
+  }, [productId]);
 
   if (!product) {
-    notFound();
+    return <div>Loading...</div>;
   }
 
   const handleCheckout = async () => {
     try {
-      const res = await fetch("/api/stripe/create-checkout-session", {
+      const response = await fetch("/api/stripe/create-checkout-session", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId: product.id }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ productId }),
       });
 
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url; // Przekierowanie do Stripe Checkout
+      const data = await response.json();
+
+      if (response.ok && data.url) {
+        window.location.href = data.url;
       } else {
-        alert("Failed to create checkout session.");
+        console.error("Error:", data.error);
+        alert("Error: " + (data.error || "Unable to initiate checkout."));
       }
     } catch (error) {
-      console.error("Checkout Error:", error);
+      console.error("Error:", error);
+      alert("Error: Unable to initiate checkout.");
     }
   };
 
   return (
     <div className="max-w-screen-lg mx-auto py-12">
-      {/* Zdjęcie produktu */}
-      <div className="relative w-full h-96 mb-8">
+      <h1 className="text-4xl font-bold mb-8">{product.name}</h1>
+      <div className="relative w-full h-64 mb-4">
         <Image
           src={product.image}
           alt={product.name}
@@ -45,18 +71,12 @@ export default function ProductPage({ params: promise }: { params: Promise<{ id:
           className="rounded-lg"
         />
       </div>
+      <p className="mt-2 text-gray-600">{product.description}</p>
+      <p className="mt-4 font-bold">${(product.price / 100).toFixed(2)}</p>
 
-      {/* Szczegóły produktu */}
-      <h1 className="text-4xl font-bold">{product.name}</h1>
-      <p className="mt-4 text-gray-600">{product.description}</p>
-      <p className="mt-6 text-2xl font-bold">
-        Price: ${(product.price / 100).toFixed(2)}
-      </p>
-
-      {/* Przycisk "Buy Now" */}
       <button
         onClick={handleCheckout}
-        className="mt-6 px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600"
+        className="mt-4 px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
         Buy Now
       </button>
