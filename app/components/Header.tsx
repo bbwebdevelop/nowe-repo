@@ -27,9 +27,7 @@ export const Header = () => {
           <Link href="/about">
             <h4>About</h4>
           </Link>
-          <Link href="/services">
-            <h4>Services</h4>
-          </Link>
+          
           <Link href="/booking">
             <h4>Booking</h4>
           </Link>
@@ -67,9 +65,7 @@ export const Header = () => {
           <Link href="/about">
             <h4>About</h4>
           </Link>
-          <Link href="/services">
-            <h4>Services</h4>
-          </Link>
+          
           <Link href="/booking">
             <h4>Booking</h4>
           </Link>
@@ -77,12 +73,7 @@ export const Header = () => {
             <h4>Shop</h4>
           </Link>
 
-          <button className="mt-4 lg:mt-0 px-2 py-2 rounded-full text-white font-lg bg-grey-11 shadow-md hover:scale-105 transform transition no-cursor">
-            Sign Up
-          </button>
-          <button className=" px-6 py-2.5 rounded-full text-grey-11 font-lg bg-green-60 shadow-md hover:scale-105 transform transition no-cursor">
-            Login
-          </button>
+          
         </div>
       )}
     </div>

@@ -55,6 +55,13 @@
     url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.svg#ABChanel Corpo Regular")format("svg");
 }
 
+html {
+  -font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
   h1 {
     font-family: "ABChanel Corpo Regular";
    font-size: 25px;
@@ -83,3 +90,10 @@
     font-family: 'NeueMontreal-Regular';
     font-weight: 400;
   }
+
+  .service-title {
+    font-family: 'geomanist', sans-serif;
+    font-weight: 300;
+    
+  }
+

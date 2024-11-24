@@ -2,14 +2,14 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { products } from "@/app/data/products";
 
-
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2024-10-28.acacia",
 });
 
 export async function POST(req: Request) {
-  const { productId } = await req.json();
+  const { productId, quantity } = await req.json(); 
 
+  
   const product = products.find((item) => item.id === productId);
 
   if (!product) {
@@ -17,32 +17,33 @@ export async function POST(req: Request) {
   }
 
   try {
+    
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      payment_method_types: ["card"], 
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "usd", 
             product_data: {
-              name: product.name,
-              description: product.description,
+              name: product.name, 
+              description: product.shortDescription, 
               images: [
-                `${process.env.NEXT_PUBLIC_BASE_URL}${product.image}`, // Dynamiczny obraz
+                `${process.env.NEXT_PUBLIC_BASE_URL}${product.images[0]}`,
               ],
             },
-            unit_amount: product.price,
+            unit_amount: product.price, 
           },
-          quantity: 1,
+          quantity: quantity || 1, 
         },
       ],
-      mode: "payment",
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/booking/success`, // Poprawna ścieżka sukcesu
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop`, // Poprawna ścieżka anulowania
+      mode: "payment", 
+      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/booking/success`, 
+      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop`, 
     });
 
-    return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url }); 
   } catch (error) {
-    console.error("Stripe Error:", error);
+    console.error("Stripe Error:", error); 
     return NextResponse.json({ error: "Stripe checkout failed" }, { status: 500 });
   }
 }
