@@ -31,7 +31,7 @@ export default function AboutPage() {
 
           <div>
             <Image
-              src="/vanityfair.jpg"
+              src={"/vanityfair.jpg"}
               width={500}
               height={600}
               alt="hero"
@@ -81,7 +81,7 @@ export default function AboutPage() {
         <div className="">
           <div className="relative w-full h-[800px]">
             <Image
-              src="/about11.jpg"
+              src={"/about11.jpg"}
               alt="hero"
               className="grayscale"
               layout="fill"
@@ -95,7 +95,7 @@ export default function AboutPage() {
               THE LIST OF FAMOUS FACES COULD FILL ALL OF HOLLYWOOD
             </h4>
             <Image
-              src="/about12.jpg"
+              src={"/about12.jpg"}
               width={700}
               height={600}
               alt="hero"
@@ -104,7 +104,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="/about13.jpg"
+              src={"/about13.jpg"}
               width={900}
               height={1200}
               alt="hero"
@@ -118,7 +118,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-12 gap-2">
           <div className="flex flex-col gap-4">
             <Image
-              src="/about1.jpg"
+              src={"/about1.jpg"}
               width={700}
               height={600}
               alt="hero"
@@ -139,7 +139,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="/about2.jpg"
+              src={"/about2.jpg"}
               width={700}
               height={600}
               alt="hero"
@@ -149,7 +149,7 @@ export default function AboutPage() {
         </div>
         <div>
           <Image
-            src="/about3.jpg"
+            src={"/about3.jpg"}
             width={1200}
             height={600}
             alt="hero"
