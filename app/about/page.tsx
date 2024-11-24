@@ -13,17 +13,22 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-16 gap-8">
           <div>
             <h2 className="text-4xl tracking-tighter py-10 mb-4 text-center lg:text-start">
-              "Her scissors have touched the heads of Hollywood’s elite."
+              &ldquo;Her scissors have touched the heads of Hollywood&rsquo;s
+              elite.&rdquo;
             </h2>
-            <p className="px-2 mb-6 lg:px-0 lg:mb-7 text-black/70 text-right">
-              "...From the red carpets of Los Angeles to the private salons of
-              Manhattan, Sally Hershberger’s transformative touch has defined
-              the looks of the world’s most iconic figures. Her ability to blend
-              effortless sophistication with cutting-edge trends has made her
-              the hairstylist of choice for A-listers across the globe..."
+            <p className="px-4 mb-6 lg:px-0 lg:mb-7 text-black/70 text-right">
+              &ldquo;...From the red carpets of Los Angeles to the private
+              salons of Manhattan, Sally Hershberger&rsquo;s transformative
+              touch has defined the looks of the world&rsquo;s most iconic
+              figures. Her ability to blend effortless sophistication with
+              cutting-edge trends has made her the hairstylist of choice for
+              A-listers across the globe...&rdquo;
             </p>
-            <p className="text-right text-sm">Vanity Fair, May 2020</p>
+            <p className="text-right text-sm text-black/70">
+              Vanity Fair, May 2020
+            </p>
           </div>
+
           <div>
             <Image
               src="/vanityfair.jpg"
@@ -86,10 +91,10 @@ export default function AboutPage() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-12 gap-2">
           <div>
-          <h4 className="text-4xl text-left text-black/70 tracking-tighter mb-8 py-12 max-w-[80%]">
-        THE LIST OF FAMOUS FACES COULD FILL ALL OF HOLLYWOOD
-        </h4>
-        <Image
+            <h4 className="text-4xl text-left text-black/70 tracking-tighter mb-8 py-12 max-w-[80%]">
+              THE LIST OF FAMOUS FACES COULD FILL ALL OF HOLLYWOOD
+            </h4>
+            <Image
               src="/about12.jpg"
               width={700}
               height={600}
@@ -101,15 +106,15 @@ export default function AboutPage() {
             <Image
               src="/about13.jpg"
               width={900}
-              height={1200}            
+              height={1200}
               alt="hero"
               className="grayscale"
             />
           </div>
         </div>
         <h4 className="text-5xl text-right text-black/70 tracking-tighter mb-8 py-12">
-        BEHIND THE SCENES
-          </h4>
+          BEHIND THE SCENES
+        </h4>
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-12 gap-2">
           <div className="flex flex-col gap-4">
             <Image
@@ -118,9 +123,19 @@ export default function AboutPage() {
               height={600}
               alt="hero"
               className="grayscale"
-            />  
-            <h4 className="text-3xl text-left text-black/70 tracking-tighter mb-4 py-12">MOTHER, WIFE, DOG LOVER</h4>
-            <p className="px-2 mb-6 lg:px-0 lg:mb-7 text-black/70 text-left">Beyond the glitz and glamour of her career, she cherishes life’s simpler joys. As a dedicated mother, she finds balance between work and family, while as a wife, she nurtures a love that grounds her. Her heart also belongs to her furry companions, and she’s a passionate advocate for animal welfare, spending her free time supporting shelters and promoting adoption. It’s this blend of personal and professional grace that truly defines her.</p>
+            />
+            <h4 className="text-3xl text-left text-black/70 tracking-tighter mb-4 py-12">
+              MOTHER, WIFE, DOG LOVER
+            </h4>
+            <p className="px-2 mb-6 lg:px-0 lg:mb-7 text-black/70 text-left">
+              Beyond the glitz and glamour of her career, she cherishes life’s
+              simpler joys. As a dedicated mother, she finds balance between
+              work and family, while as a wife, she nurtures a love that grounds
+              her. Her heart also belongs to her furry companions, and she’s a
+              passionate advocate for animal welfare, spending her free time
+              supporting shelters and promoting adoption. It’s this blend of
+              personal and professional grace that truly defines her.
+            </p>
           </div>
           <div>
             <Image
