@@ -13,8 +13,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-16 gap-8">
           <div>
             <h2 className="text-4xl tracking-tighter py-10 mb-4 text-center lg:text-start">
-              &ldquo;Her scissors have touched the heads of Hollywood&rsquo;s
-              elite.&rdquo;
+              &ldquo;Her scissors have touched the heads of Hollywood&rsquo;s elite.&rdquo;
             </h2>
             <p className="px-4 mb-6 lg:px-0 lg:mb-7 text-black/70 text-right">
               &ldquo;...From the red carpets of Los Angeles to the private
@@ -31,7 +30,7 @@ export default function AboutPage() {
 
           <div>
             <Image
-              src={"/vanityfair.jpg"}
+              src="/vanityfair.jpg"
               width={500}
               height={600}
               alt="hero"
@@ -47,14 +46,14 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-12 gap-2">
           <div className="flex flex-col gap-2">
             <Image
-              src={"/about7.jpg"}
+              src="/about7.jpg"
               width={800}
               height={600}
               alt="hero"
               className="grayscale"
             />
             <Image
-              src={"/about10.jpg"}
+              src="/about10.jpg"
               width={800}
               height={600}
               alt="hero"
@@ -63,14 +62,14 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-2">
             <Image
-              src={"/about8.jpg"}
+              src="/about8.jpg"
               width={700}
               height={600}
               alt="hero"
               className="grayscale"
             />
             <Image
-              src={"/about9.jpg"}
+              src="/about9.jpg"
               width={700}
               height={600}
               alt="hero"
@@ -81,7 +80,7 @@ export default function AboutPage() {
         <div className="">
           <div className="relative w-full h-[800px]">
             <Image
-              src={"/about11.jpg"}
+              src="/about11.jpg"
               alt="hero"
               className="grayscale"
               layout="fill"
@@ -95,7 +94,7 @@ export default function AboutPage() {
               THE LIST OF FAMOUS FACES COULD FILL ALL OF HOLLYWOOD
             </h4>
             <Image
-              src={"/about12.jpg"}
+              src="/about12.jpg"
               width={700}
               height={600}
               alt="hero"
@@ -104,7 +103,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src={"/about13.jpg"}
+              src="/about13.jpg"
               width={900}
               height={1200}
               alt="hero"
@@ -118,7 +117,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto py-12 gap-2">
           <div className="flex flex-col gap-4">
             <Image
-              src={"/about1.jpg"}
+              src="/about1.jpg"
               width={700}
               height={600}
               alt="hero"
@@ -128,18 +127,18 @@ export default function AboutPage() {
               MOTHER, WIFE, DOG LOVER
             </h4>
             <p className="px-2 mb-6 lg:px-0 lg:mb-7 text-black/70 text-left">
-              Beyond the glitz and glamour of her career, she cherishes life’s
+              Beyond the glitz and glamour of her career, she cherishes life&rsquo;s
               simpler joys. As a dedicated mother, she finds balance between
               work and family, while as a wife, she nurtures a love that grounds
-              her. Her heart also belongs to her furry companions, and she’s a
+              her. Her heart also belongs to her furry companions, and she&rsquo;s a
               passionate advocate for animal welfare, spending her free time
-              supporting shelters and promoting adoption. It’s this blend of
+              supporting shelters and promoting adoption. It&rsquo;s this blend of
               personal and professional grace that truly defines her.
             </p>
           </div>
           <div>
             <Image
-              src={"/about2.jpg"}
+              src="/about2.jpg"
               width={700}
               height={600}
               alt="hero"
@@ -149,7 +148,7 @@ export default function AboutPage() {
         </div>
         <div>
           <Image
-            src={"/about3.jpg"}
+            src="/about3.jpg"
             width={1200}
             height={600}
             alt="hero"
